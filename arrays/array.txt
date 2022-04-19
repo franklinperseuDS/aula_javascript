@@ -1,0 +1,51 @@
+map 
+sintaxe
+array.map(callback, thisArg)
+callback(item,index, array)
+thisArg(opcional): valor de 'This' dentro da função de call back
+
+
+forEach
+
+exemplo comparativo
+
+const array = [1,2,3,4,5];
+array.map((item) => item * 2); // retorno : [2,4,6,8,10]
+
+const array = [1,2,3,4,5];
+array.forEach((item) => item * 2); //retorna undefined
+
+
+
+
+Filter
+básicamente vai filtrar o array. 
+cria um novo array
+não modifica o array original
+sintaxe:
+    array.filter(callback, thisArg);
+    thisArg(opcional): valor de 'this dentro da função de callback
+
+const frutas = ['maçã fuji', maçã verde', laranja','abacaxi']
+frutas.filter((fruta) => fruta.include('maçã'))
+
+
+Reduce 
+
+ * Executa uma função de todos os elementos .
+
+ sintaxe:
+        array.reduce(callback, initialValue)
+
+    callback = função a ser executada a partid do acumulador
+    initialValue: valor sobre o qual o retorno final irá atuar
+
+ex:
+    const callbackFn = function(accumulator, currentValue, index, array){
+        //do something
+    }
+
+    array.reduce(callbackFn, initialValue)
+
+    
+

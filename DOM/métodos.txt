@@ -1,0 +1,70 @@
+#Estrutura HTML
+
+tag  
+id  -> #  unico
+classe -> . varios elementos
+
+
+como buscar um elemento
+por ID
+document.getElementById('titulo)   -> retorna um unico elemento
+por tag
+document.getElementsByTagName('li');  -> retorna um array
+Por classe
+document.getElementsByClassName('textos)   -> retorna um array
+
+outro tipo de seletor
+document.querySelectorAll('.primeira-classe .segunda-classe');
+
+document.querySelectorAll('li .opcao');
+
+Método                      Descrição
+document.createElement(element) Criar um novo elemento HTML
+document.removeChild(element)   remove um elemento 
+document.appendChild(element)   adiciona um elemento
+document.replaceChild(new, old) substitui um elemento 
+
+
+#Estilos 
+Classes
+ Element.classList   -> propriedade do elemento que é uma lista de classes 
+EX:
+ <div id='meu-elemento' class='classe'> </div>
+
+const meuElemento = document.getElementById("meu-elemento");
+meuElemento.classList.add("novo-estilo");
+meuElemento.classList.remove("classe");
+meuElemento.classList.toggle("dark-mode");
+
+
+Acessar o css de um elemento via js 
+document.getElementById("p").style.color = "blue"
+
+
+
+# Eventos
+
+Tipos 
+
+Eventos de mouse 
+mouseover , mouseout 
+Eventos de clique
+click, dbclick
+Eventos de atualização 
+Change, load 
+
+Como adicionar? Event listener
+
+diretamente no js
+const botao = document.getElementById("meuBotao);
+botao.addEventListener("click", outraFuncao);
+
+Diretamente no HTML
+
+<h1 onclick="mudaTexto(this)"> clique aqui! </h1>
+
+<script>
+    const mudaTExto = (id) =>  id.innerHTML = "Mudei";
+    
+</script>
+
